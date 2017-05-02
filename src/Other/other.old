@@ -1,0 +1,32 @@
+------------------------MODULE other-------------------
+EXTENDS TLC, Naturals, Integer
+CONSTANTS x
+
+(*
+--algorithm p2{
+variables z=0, v=0, w=1, t=3, u=0, varun;
+{
+    while(u<x)
+    {
+        varun:=v+w;
+        z:=z+varun;
+        v:=v+t;
+        t:=t+6;
+        w:=w+3;
+        u:=u+1;
+    };
+}
+}
+
+
+
+*)
+
+
+
+
+
+
+
+
+=======================================================
