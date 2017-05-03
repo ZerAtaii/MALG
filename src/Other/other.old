@@ -1,26 +1,33 @@
 ------------------------MODULE other-------------------
 EXTENDS TLC, Naturals, Integer
-CONSTANTS x
+CONSTANTS x,v0
 
 (*
---algorithm p2{
-variables z=0, v=0, w=1, t=3, u=0, varun;
-{
+
+--algorithm main{
+variables v=v0, r, vardeux,z=0, v1=0, w=1, t=3, u=0, varun;
+procedure p2(x) {
     while(u<x)
     {
-        varun:=v+w;
+        varun:=v1+w;
         z:=z+varun;
-        v:=v+t;
+        v1:=v1+t;
         t:=t+6;
         w:=w+3;
         u:=u+1;
-    };
+    }; 
 }
+{
+    vardeux:=v*v;
+    r:=vardeux*v;
+    print<< " La solution trouvee est ",p2(v)>>;
+    print<<" et devrait etre ",r>>;
+}    
 }
-
-
 
 *)
+
+
 
 
 
