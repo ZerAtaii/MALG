@@ -1,5 +1,5 @@
 ----------------------------------MODULE palindrome ------------------------------
-EXTENDS TLCS, Integers, Naturals
+EXTENDS TLC, Naturals
 CONSTANTS n0
 
 (*

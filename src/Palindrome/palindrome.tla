@@ -1,5 +1,5 @@
 ----------------------------------MODULE palindrome ------------------------------
-EXTENDS TLCS, Integers, Naturals
+EXTENDS TLC, Naturals
 CONSTANTS n0
 
 (*
@@ -67,7 +67,9 @@ Next == Lbl_1 \/ Lbl_2 \/ Lbl_3
 
 Spec == Init /\ [][Next]_vars
 
-Termination == <>(pc = "Done")
+Termination == pc = "Done" \/ pc = "Lbl_2" \/ pc = "Lbl_1" \/ pc = "Lbl_3"
+
+safe == n>=0 /\ reverse>=0
 
 \* END TRANSLATION
 
