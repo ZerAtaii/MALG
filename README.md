@@ -28,6 +28,7 @@ possible.
 # TRAVAIL
 
 - Traduire les 3 codes en algo PlusCal
+- Ajouter les asserts dans le code C sur Frama-C
 - Verifier la correction partielle
 - Verifier absence d'erreurs à l'exécution
 - Si possible et si motivé, optimisez le code (FACULTATIF)
