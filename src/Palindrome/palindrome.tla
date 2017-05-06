@@ -67,7 +67,9 @@ Next == Lbl_1 \/ Lbl_2 \/ Lbl_3
 
 Spec == Init /\ [][Next]_vars
 
-Termination == pc = "Done" \/ pc = "Lbl_2" \/ pc = "Lbl_1" \/ pc = "Lbl_3"
+Termination == <>(pc = "Done")
+
+Temporal == pc = "Done" \/ pc = "Lbl_1" \/ pc = "Lbl_2" \/ pc = "Lbl_3"
 
 safe == n>=0 /\ reverse>=0
 

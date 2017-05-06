@@ -68,7 +68,9 @@ Next == Lbl_1
 
 Spec == Init /\ [][Next]_vars
 
-Termination ==  pc = "Done" \/ pc = "Lbl_1"
+Termination == <>(pc = "Done")
+
+Temporal ==  pc = "Done" \/ pc = "Lbl_1"
 
 safe ==  u<=v /\ (pc="Done" => r=v*v*v /\ z = v*v*v)
 \* END TRANSLATION
