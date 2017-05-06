@@ -9,9 +9,9 @@ int p2 (unsigned int  x)
 //@assert w==1;
 //@assert t==3;
 //@assert u==0;
-/*@ loop invariant u >= 0 && u <= x && z == u*u*u;
-  @ loop assigns z,v,t,w,u;
-  @ loop variant x-u; */
+//@ loop invariant u >= 0 && u <= x && z == u*u*u;
+//@ loop assigns z,v,t,w,u;
+//@ loop variant x-u; 
   while ( u < x )
   {
     z=z+v+w;
