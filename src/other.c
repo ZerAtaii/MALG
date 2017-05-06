@@ -9,7 +9,9 @@ int p2 (unsigned int  x)
 //@assert w==1;
 //@assert t==3;
 //@assert u==0;
-//@ loop invariant u <= x && w == 3 * u + 1;
+/*@ loop invariant u >= 0 && u <= x && z == u*u*u;
+  @ loop assigns z,v,t,w,u;
+  @ loop variant x-u; */
   while ( u < x )
   {
     z=z+v+w;
@@ -18,6 +20,8 @@ int p2 (unsigned int  x)
     w=w+3;
     u=u+1;
   }
+  //@ assert u == x;
+  //@ assert z == x*x*x;
   return (z) ;
 }
 
