@@ -1,47 +1,57 @@
 ------------------MODULE shellsort------------------------
 EXTENDS TLC, Naturals, Sequences
-CONSTANTS a,sizeTab
+CONSTANTS sizeTab
 
 (*
 --algorithm main{
-variables trucinc,i,j,tmp,tri=[k \in 1..sizeTab |->k+1 ],p=1;
+variables a,trucinc,i,j,tmp=0,pivot=8;
 {
-    trucinc:=3;
-    i:=1..sizeTab;
+    a:=<<5,8,9,6,7,2,1,3>>;
+    trucinc:=1;
+    i:=1;
+    print <<"Array before sorting: ",a>>;
     while(trucinc>0)
     {
         
-        while (i#{}) {
-            i := i \ {p} ;
-            j:=p;
-            tmp:=a[p];
-            if (j>=trucinc) {
-                while (a[j-trucinc] > tmp)
-                {
-                    a[j]:=a[j-trucinc];
-                    j:=j-trucinc;
-                };
-            };
-                
-            a[j] := tmp; 
-        
+        while (i<=sizeTab) {
             
-            if  ((trucinc \div 2)#0) {
-                trucinc:=trucinc \div 2;
+           j:=i;
+           tmp:=a[i];
+           
+                
+           while ((j>trucinc) /\ (a[j-trucinc] > tmp))
+           {
+                    
+               a[j]:=a[j-trucinc];
+               j:=j-trucinc;
+               
             };
-            if (trucinc=1) {
-                trucinc:=0;
-            }
-            else {
-                trucinc:=1;
-            };
-            p:=p+1;
+            a[j] := tmp;
+                
+            
+            i:=i+1;
         };
+            
+        if  ((trucinc \div 2)#0) {
+            trucinc:=trucinc \div 2;
+                
+        };
+        else if (trucinc=1) {
+                trucinc:=0;
+                    
+        };
+        else {
+                    
+            trucinc:=1;
+            
+        };
+            
+        
     
         
     };
-    print <<"Array before sorting: ",a>>;
-    print <<"Array after sorting: ",tri>>;
+    
+    print <<"Array after sorting: ",a>>;
 }
 }
             
@@ -49,82 +59,62 @@ variables trucinc,i,j,tmp,tri=[k \in 1..sizeTab |->k+1 ],p=1;
 *)
 \* BEGIN TRANSLATION
 CONSTANT defaultInitValue
-VARIABLES trucinc, i, j, tmp, tri, p, pc
+VARIABLES a, trucinc, i, j, tmp, pivot, pc
 
-vars == << trucinc, i, j, tmp, tri, p, pc >>
+vars == << a, trucinc, i, j, tmp, pivot, pc >>
 
 Init == (* Global variables *)
+        /\ a = defaultInitValue
         /\ trucinc = defaultInitValue
         /\ i = defaultInitValue
         /\ j = defaultInitValue
-        /\ tmp = defaultInitValue
-        /\ tri = [k \in 1..sizeTab |->k+1 ]
-        /\ p = 1
+        /\ tmp = 0
+        /\ pivot = 8
         /\ pc = "Lbl_1"
 
 Lbl_1 == /\ pc = "Lbl_1"
-         /\ trucinc' = 3
-         /\ i' = 1..sizeTab
+         /\ a' = <<5,6,3,1,7,8,2,4>>
+         /\ trucinc' = 1
+         /\ i' = 1
+         /\ PrintT(<<"Array before sorting: ",a'>>)
          /\ pc' = "Lbl_2"
-         /\ UNCHANGED << j, tmp, tri, p >>
+         /\ UNCHANGED << j, tmp, pivot >>
 
 Lbl_2 == /\ pc = "Lbl_2"
          /\ IF trucinc>0
                THEN /\ pc' = "Lbl_3"
-               ELSE /\ PrintT(<<"Array before sorting: ",a>>)
-                    /\ PrintT(<<"Array after sorting: ",tri>>)
+               ELSE /\ PrintT(<<"Array after sorting: ",a>>)
                     /\ pc' = "Done"
-         /\ UNCHANGED << trucinc, i, j, tmp, tri, p >>
+         /\ UNCHANGED << a, trucinc, i, j, tmp, pivot >>
 
 Lbl_3 == /\ pc = "Lbl_3"
-         /\ IF i#{}
-               THEN /\ i' = i \ {p}
-                    /\ j' = p
-                    /\ tmp' = a[p]
-                    /\ IF j'>=trucinc
-                          THEN /\ pc' = "Lbl_4"
-                          ELSE /\ pc' = "Lbl_5"
-               ELSE /\ pc' = "Lbl_2"
-                    /\ UNCHANGED << i, j, tmp >>
-         /\ UNCHANGED << trucinc, tri, p >>
-
-Lbl_5 == /\ pc = "Lbl_5"
-         /\ a' = [a EXCEPT ![j] = tmp]
-         /\ IF (trucinc \div 2)#0
-               THEN /\ trucinc' = (trucinc \div 2)
-               ELSE /\ TRUE
+         /\ IF i<=sizeTab
+               THEN /\ j' = i
+                    /\ tmp' = a[i]
+                    /\ pc' = "Lbl_4"
                     /\ UNCHANGED trucinc
-         /\ IF trucinc'=1
-               THEN /\ pc' = "Lbl_6"
-               ELSE /\ pc' = "Lbl_7"
-         /\ UNCHANGED << i, j, tmp, tri, p >>
-
-Lbl_6 == /\ pc = "Lbl_6"
-         /\ trucinc' = 0
-         /\ pc' = "Lbl_8"
-         /\ UNCHANGED << i, j, tmp, tri, p >>
-
-Lbl_7 == /\ pc = "Lbl_7"
-         /\ trucinc' = 1
-         /\ pc' = "Lbl_8"
-         /\ UNCHANGED << i, j, tmp, tri, p >>
-
-Lbl_8 == /\ pc = "Lbl_8"
-         /\ p' = p+1
-         /\ pc' = "Lbl_3"
-         /\ UNCHANGED << trucinc, i, j, tmp, tri >>
+               ELSE /\ IF (trucinc \div 2)#0
+                          THEN /\ trucinc' = (trucinc \div 2)
+                          ELSE /\ IF trucinc=1
+                                     THEN /\ trucinc' = 0
+                                     ELSE /\ trucinc' = 1
+                    /\ pc' = "Lbl_2"
+                    /\ UNCHANGED << j, tmp >>
+         /\ UNCHANGED << a, i, pivot >>
 
 Lbl_4 == /\ pc = "Lbl_4"
-         /\ IF a[j-trucinc] > tmp
+         /\ IF (j>trucinc) /\ (a[j-trucinc] > tmp)
                THEN /\ a' = [a EXCEPT ![j] = a[j-trucinc]]
                     /\ j' = j-trucinc
                     /\ pc' = "Lbl_4"
-               ELSE /\ pc' = "Lbl_5"
+                    /\ i' = i
+               ELSE /\ a' = [a EXCEPT ![j] = tmp]
+                    /\ i' = i+1
+                    /\ pc' = "Lbl_3"
                     /\ j' = j
-         /\ UNCHANGED << trucinc, i, tmp, tri, p >>
+         /\ UNCHANGED << trucinc, tmp, pivot >>
 
-Next == Lbl_1 \/ Lbl_2 \/ Lbl_3 \/ Lbl_5 \/ Lbl_6 \/ Lbl_7 \/ Lbl_8
-           \/ Lbl_4
+Next == Lbl_1 \/ Lbl_2 \/ Lbl_3 \/ Lbl_4
            \/ (* Disjunct to prevent deadlock on termination *)
               (pc = "Done" /\ UNCHANGED vars)
 

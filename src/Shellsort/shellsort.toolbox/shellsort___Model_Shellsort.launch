@@ -5,7 +5,7 @@
 <intAttribute key="dfidDepth" value="100"/>
 <booleanAttribute key="dfidMode" value="false"/>
 <intAttribute key="distributedFPSetCount" value="0"/>
-<stringAttribute key="distributedNetworkInterface" value="10.10.109.147"/>
+<stringAttribute key="distributedNetworkInterface" value="192.168.0.13"/>
 <intAttribute key="distributedNodesCount" value="1"/>
 <stringAttribute key="distributedTLC" value="off"/>
 <stringAttribute key="distributedTLCVMArgs" value=""/>
@@ -18,7 +18,7 @@
 <stringAttribute key="modelBehaviorNext" value=""/>
 <stringAttribute key="modelBehaviorSpec" value="Spec"/>
 <intAttribute key="modelBehaviorSpecType" value="1"/>
-<stringAttribute key="modelBehaviorVars" value="var, trucinc, i, j, p, tri, pc, var2, tmp"/>
+<stringAttribute key="modelBehaviorVars" value="trucinc, a, i, j, pivot, pc, tmp"/>
 <stringAttribute key="modelComments" value=""/>
 <booleanAttribute key="modelCorrectnessCheckDeadlock" value="true"/>
 <listAttribute key="modelCorrectnessInvariants"/>
@@ -29,7 +29,6 @@
 <stringAttribute key="modelParameterActionConstraint" value=""/>
 <listAttribute key="modelParameterConstants">
 <listEntry value="defaultInitValue;;defaultInitValue;1;0"/>
-<listEntry value="a;;&lt;&lt;5,6,3,1,7,8,2,4&gt;&gt;;0;0"/>
 <listEntry value="sizeTab;;8;0;0"/>
 </listAttribute>
 <stringAttribute key="modelParameterContraint" value=""/>
