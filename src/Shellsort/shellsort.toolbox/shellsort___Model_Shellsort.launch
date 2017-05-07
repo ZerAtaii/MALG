@@ -18,10 +18,12 @@
 <stringAttribute key="modelBehaviorNext" value=""/>
 <stringAttribute key="modelBehaviorSpec" value="Spec"/>
 <intAttribute key="modelBehaviorSpecType" value="1"/>
-<stringAttribute key="modelBehaviorVars" value="trucinc, a, i, j, pivot, pc, tmp"/>
+<stringAttribute key="modelBehaviorVars" value="trucinc, a, i, j, pc, tmp"/>
 <stringAttribute key="modelComments" value=""/>
 <booleanAttribute key="modelCorrectnessCheckDeadlock" value="true"/>
-<listAttribute key="modelCorrectnessInvariants"/>
+<listAttribute key="modelCorrectnessInvariants">
+<listEntry value="1safe"/>
+</listAttribute>
 <listAttribute key="modelCorrectnessProperties">
 <listEntry value="0Termination"/>
 </listAttribute>

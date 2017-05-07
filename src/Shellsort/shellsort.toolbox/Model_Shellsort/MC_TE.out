@@ -21,7 +21,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2017-05-07 12:02:12)
+Starting... (2017-05-07 12:24:37)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
@@ -36,64 +36,55 @@ Model checking completed. No error has been found.
   Estimates of the probability that TLC did not check all reachable states
   because two distinct states had the same fingerprint:
   calculated (optimistic):  val = 2.2E-18
-  based on the actual fingerprints:  val = 1.4E-15
+  based on the actual fingerprints:  val = 8.5E-17
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2017-05-07 12:02:12
+The coverage statistics at 2017-05-07 12:24:38
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 100, col 46 to line 100, col 57 of module shellsort: 0
+  line 100, col 24 to line 100, col 36 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 101, col 24 to line 101, col 36 of module shellsort: 1
+  line 101, col 37 to line 101, col 37 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 102, col 37 to line 102, col 37 of module shellsort: 1
+  line 101, col 40 to line 101, col 42 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 102, col 40 to line 102, col 42 of module shellsort: 1
+  line 102, col 26 to line 102, col 26 of module shellsort: 9
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 103, col 26 to line 103, col 26 of module shellsort: 9
+  line 102, col 29 to line 102, col 29 of module shellsort: 9
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 103, col 29 to line 103, col 29 of module shellsort: 9
+  line 106, col 24 to line 106, col 58 of module shellsort: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 103, col 32 to line 103, col 36 of module shellsort: 9
+  line 107, col 24 to line 107, col 37 of module shellsort: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 107, col 24 to line 107, col 58 of module shellsort: 20
+  line 108, col 24 to line 108, col 36 of module shellsort: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 108, col 24 to line 108, col 37 of module shellsort: 20
+  line 109, col 24 to line 109, col 29 of module shellsort: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 109, col 24 to line 109, col 36 of module shellsort: 20
+  line 110, col 24 to line 110, col 49 of module shellsort: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 110, col 24 to line 110, col 29 of module shellsort: 20
+  line 111, col 24 to line 111, col 31 of module shellsort: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 111, col 24 to line 111, col 49 of module shellsort: 8
+  line 112, col 24 to line 112, col 36 of module shellsort: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 112, col 24 to line 112, col 31 of module shellsort: 8
+  line 113, col 24 to line 113, col 29 of module shellsort: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 113, col 24 to line 113, col 36 of module shellsort: 8
+  line 114, col 26 to line 114, col 32 of module shellsort: 28
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 114, col 24 to line 114, col 29 of module shellsort: 8
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 115, col 26 to line 115, col 32 of module shellsort: 28
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 115, col 35 to line 115, col 37 of module shellsort: 28
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 115, col 40 to line 115, col 44 of module shellsort: 28
+  line 114, col 35 to line 114, col 37 of module shellsort: 28
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 64, col 12 to line 64, col 12 of module shellsort: 1
@@ -111,79 +102,73 @@ The coverage statistics at 2017-05-07 12:02:12
   line 64, col 30 to line 64, col 32 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 64, col 35 to line 64, col 39 of module shellsort: 1
+  line 64, col 35 to line 64, col 36 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 64, col 42 to line 64, col 43 of module shellsort: 1
+  line 75, col 13 to line 75, col 36 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 76, col 13 to line 76, col 36 of module shellsort: 1
+  line 76, col 13 to line 76, col 24 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 77, col 13 to line 77, col 24 of module shellsort: 1
+  line 77, col 13 to line 77, col 18 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 78, col 13 to line 78, col 18 of module shellsort: 1
+  line 79, col 13 to line 79, col 25 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 80, col 13 to line 80, col 25 of module shellsort: 1
+  line 80, col 26 to line 80, col 26 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 81, col 26 to line 81, col 26 of module shellsort: 1
+  line 80, col 29 to line 80, col 31 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 81, col 29 to line 81, col 31 of module shellsort: 1
+  line 84, col 24 to line 84, col 36 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 81, col 34 to line 81, col 38 of module shellsort: 1
+  line 86, col 24 to line 86, col 35 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 85, col 24 to line 85, col 36 of module shellsort: 1
+  line 87, col 26 to line 87, col 26 of module shellsort: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 87, col 24 to line 87, col 35 of module shellsort: 1
+  line 87, col 29 to line 87, col 35 of module shellsort: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 88, col 26 to line 88, col 26 of module shellsort: 2
+  line 87, col 38 to line 87, col 38 of module shellsort: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 88, col 29 to line 88, col 35 of module shellsort: 2
+  line 87, col 41 to line 87, col 41 of module shellsort: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 88, col 38 to line 88, col 38 of module shellsort: 2
+  line 87, col 44 to line 87, col 46 of module shellsort: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 88, col 41 to line 88, col 41 of module shellsort: 2
+  line 91, col 24 to line 91, col 29 of module shellsort: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 88, col 44 to line 88, col 46 of module shellsort: 2
+  line 92, col 24 to line 92, col 34 of module shellsort: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 88, col 49 to line 88, col 53 of module shellsort: 2
+  line 93, col 24 to line 93, col 36 of module shellsort: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 92, col 24 to line 92, col 29 of module shellsort: 8
+  line 94, col 34 to line 94, col 40 of module shellsort: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 93, col 24 to line 93, col 34 of module shellsort: 8
+  line 96, col 35 to line 96, col 61 of module shellsort: 0
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 94, col 24 to line 94, col 36 of module shellsort: 8
+  line 98, col 46 to line 98, col 57 of module shellsort: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 95, col 34 to line 95, col 40 of module shellsort: 8
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 97, col 35 to line 97, col 61 of module shellsort: 0
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 99, col 46 to line 99, col 57 of module shellsort: 1
+  line 99, col 46 to line 99, col 57 of module shellsort: 0
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(41) at 2017-05-07 12:02:12: 42 states generated (5 860 s/min), 41 distinct states found (5 720 ds/min), 0 states left on queue.
+Progress(41) at 2017-05-07 12:24:38: 42 states generated (4 606 s/min), 41 distinct states found (4 497 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
 42 states generated, 41 distinct states found, 0 states left on queue.
@@ -192,5 +177,5 @@ Progress(41) at 2017-05-07 12:02:12: 42 states generated (5 860 s/min), 41 disti
 The depth of the complete state graph search is 41.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 00s at (2017-05-07 12:02:12)
+Finished in 01s at (2017-05-07 12:24:38)
 @!@!@ENDMSG 2186 @!@!@

@@ -4,7 +4,7 @@ CONSTANTS sizeTab
 
 (*
 --algorithm main{
-variables a,trucinc,i,j,tmp=0,pivot=8;
+variables a,trucinc=0,i=0,j=0,tmp=0;
 {
     a:=<<5,8,9,6,7,2,1,3>>;
     trucinc:=1;
@@ -59,17 +59,16 @@ variables a,trucinc,i,j,tmp=0,pivot=8;
 *)
 \* BEGIN TRANSLATION
 CONSTANT defaultInitValue
-VARIABLES a, trucinc, i, j, tmp, pivot, pc
+VARIABLES a, trucinc, i, j, tmp, pc
 
-vars == << a, trucinc, i, j, tmp, pivot, pc >>
+vars == << a, trucinc, i, j, tmp, pc >>
 
 Init == (* Global variables *)
         /\ a = defaultInitValue
-        /\ trucinc = defaultInitValue
-        /\ i = defaultInitValue
-        /\ j = defaultInitValue
+        /\ trucinc = 0
+        /\ i = 0
+        /\ j = 0
         /\ tmp = 0
-        /\ pivot = 8
         /\ pc = "Lbl_1"
 
 Lbl_1 == /\ pc = "Lbl_1"
@@ -78,14 +77,14 @@ Lbl_1 == /\ pc = "Lbl_1"
          /\ i' = 1
          /\ PrintT(<<"Array before sorting: ",a'>>)
          /\ pc' = "Lbl_2"
-         /\ UNCHANGED << j, tmp, pivot >>
+         /\ UNCHANGED << j, tmp >>
 
 Lbl_2 == /\ pc = "Lbl_2"
          /\ IF trucinc>0
                THEN /\ pc' = "Lbl_3"
                ELSE /\ PrintT(<<"Array after sorting: ",a>>)
                     /\ pc' = "Done"
-         /\ UNCHANGED << a, trucinc, i, j, tmp, pivot >>
+         /\ UNCHANGED << a, trucinc, i, j, tmp >>
 
 Lbl_3 == /\ pc = "Lbl_3"
          /\ IF i<=sizeTab
@@ -100,7 +99,7 @@ Lbl_3 == /\ pc = "Lbl_3"
                                      ELSE /\ trucinc' = 1
                     /\ pc' = "Lbl_2"
                     /\ UNCHANGED << j, tmp >>
-         /\ UNCHANGED << a, i, pivot >>
+         /\ UNCHANGED << a, i >>
 
 Lbl_4 == /\ pc = "Lbl_4"
          /\ IF (j>trucinc) /\ (a[j-trucinc] > tmp)
@@ -112,7 +111,7 @@ Lbl_4 == /\ pc = "Lbl_4"
                     /\ i' = i+1
                     /\ pc' = "Lbl_3"
                     /\ j' = j
-         /\ UNCHANGED << trucinc, tmp, pivot >>
+         /\ UNCHANGED << trucinc, tmp >>
 
 Next == Lbl_1 \/ Lbl_2 \/ Lbl_3 \/ Lbl_4
            \/ (* Disjunct to prevent deadlock on termination *)
@@ -121,6 +120,8 @@ Next == Lbl_1 \/ Lbl_2 \/ Lbl_3 \/ Lbl_4
 Spec == Init /\ [][Next]_vars
 
 Termination == <>(pc = "Done")
+
+safe == i>=0 /\ j>=0 /\ tmp>=0 /\ trucinc>=0 /\ (pc="Done"=> \A k \in 1..sizeTab-1: a[k]<=a[k+1](*a[1]<=a[2] /\ a[2]<=a[3]/\ a[3]<=a[4]/\ a[4]<=a[5]/\ a[5]<=a[6]/\ a[6]<=a[7]/\ a[7]<=a[sizeTab])*) )
 
 \* END TRANSLATION
 
