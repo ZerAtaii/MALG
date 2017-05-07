@@ -123,6 +123,8 @@ Termination == <>(pc = "Done")
 
 safe == i>=0 /\ j>=0 /\ tmp>=0 /\ trucinc>=0 /\ (pc="Done"=> \A k \in 1..sizeTab-1: a[k]<=a[k+1] )
 
+Temporal == pc = "Lbl_1" \/ pc = "Lbl_2" \/ pc = "Lbl_3" \/ pc = "Lbl_4" \/ pc = "Done"
+
 \* END TRANSLATION
 
 

@@ -21,7 +21,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2017-05-07 12:24:37)
+Starting... (2017-05-07 12:28:50)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
@@ -39,7 +39,7 @@ Model checking completed. No error has been found.
   based on the actual fingerprints:  val = 8.5E-17
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2017-05-07 12:24:38
+The coverage statistics at 2017-05-07 12:28:51
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 100, col 24 to line 100, col 36 of module shellsort: 1
@@ -168,7 +168,7 @@ The coverage statistics at 2017-05-07 12:24:38
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(41) at 2017-05-07 12:24:38: 42 states generated (4 606 s/min), 41 distinct states found (4 497 ds/min), 0 states left on queue.
+Progress(41) at 2017-05-07 12:28:51: 42 states generated (5 121 s/min), 41 distinct states found (5 000 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
 42 states generated, 41 distinct states found, 0 states left on queue.
@@ -177,5 +177,5 @@ Progress(41) at 2017-05-07 12:24:38: 42 states generated (4 606 s/min), 41 disti
 The depth of the complete state graph search is 41.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 01s at (2017-05-07 12:24:38)
+Finished in 00s at (2017-05-07 12:28:51)
 @!@!@ENDMSG 2186 @!@!@

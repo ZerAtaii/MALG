@@ -26,6 +26,7 @@
 </listAttribute>
 <listAttribute key="modelCorrectnessProperties">
 <listEntry value="0Termination"/>
+<listEntry value="1Temporal"/>
 </listAttribute>
 <stringAttribute key="modelExpressionEval" value=""/>
 <stringAttribute key="modelParameterActionConstraint" value=""/>

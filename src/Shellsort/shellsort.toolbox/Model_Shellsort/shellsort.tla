@@ -121,7 +121,9 @@ Spec == Init /\ [][Next]_vars
 
 Termination == <>(pc = "Done")
 
-safe == i>=0 /\ j>=0 /\ tmp>=0 /\ trucinc>=0 /\ (pc="Done"=> \A k \in 1..sizeTab-1: a[k]<=a[k+1](*a[1]<=a[2] /\ a[2]<=a[3]/\ a[3]<=a[4]/\ a[4]<=a[5]/\ a[5]<=a[6]/\ a[6]<=a[7]/\ a[7]<=a[sizeTab])*) )
+safe == i>=0 /\ j>=0 /\ tmp>=0 /\ trucinc>=0 /\ (pc="Done"=> \A k \in 1..sizeTab-1: a[k]<=a[k+1] )
+
+Temporal == pc = "Lbl_1" \/ pc = "Lbl_2" \/ pc = "Lbl_3" \/ pc = "Lbl_4" \/ pc = "Done"
 
 \* END TRANSLATION
 
