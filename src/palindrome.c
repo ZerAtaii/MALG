@@ -11,9 +11,10 @@ int main()
   //@ assert reverse == 0;
   //@ assert temp == 0;
   temp = n ;
-  //@ loop invariant temp >= 0;
-  //@ loop assigns reverse,temp;
-  //@ loop variant temp; 
+  /*@ loop invariant temp >= 0;
+    @ loop assigns reverse,temp;
+    @ loop variant temp;
+  */
   while ( temp != 0 )
   {
     reverse = reverse * 10;

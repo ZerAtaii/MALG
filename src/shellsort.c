@@ -18,43 +18,58 @@ int main ()
   return 0;
 }
 
-//@ requires size>=0;
+//@ requires size>=3;
 void shellsort(int a[], const int size)
 {
   int i=0,j=0,inc,tmp=0;
   inc = 3;
   //@ assert inc == 3;
-  //@ loop invariant inc >= 0;
-  //@ loop assigns j,inc,tmp;
-  //@ loop variant inc;
+  /*@ loop invariant inc >= 0 && inc <= 3;
+    @ loop assigns j,inc,tmp,i;
+    @ loop variant inc;
+  */
   while (inc > 0)
   {
-    //@ loop invariant i >= 0;
-    //@ loop assigns j,inc,tmp;
-    //@ loop variant size-i;
+    /*@ loop invariant i >= 0 && i <= size;
+      @ loop assigns i,j,inc,tmp;
+      @ loop variant size-i;
+    */
     for (i=0; i<size; i++)
     {
       j = i;
       tmp = a[i];
-      //@ assert j-inc >= 0;
-      //@ loop assigns j,inc;
-      //@ loop variant j-inc;
+      //@ assert i >= 0;
+      //@ assert j >= 0;
+      /*@ loop invariant j >= 0;
+        @ loop assigns j;
+        @ loop variant j;
+      */
       while ((j>=inc) && ( a[j-inc]>tmp ))
       {
-        //@ assert j-inc < size;
+        //@ assert j-inc >= 0;
         a [j] = a [j-inc] ;
         j = j - inc ;
       }
       a [j] = tmp ;
     }
-    if(inc/2 != 0)
+    if(inc/2 != 0) {
+      //@ assert inc >= 2;
       inc = inc / 2 ;
-    else if( inc == 1 )
-    //@ assert inc == 1;
+      //@ assert inc >= 1;
+   } else if( inc == 1 ) {
+      //@ assert inc == 1;
       inc = 0;
-    else
-    //@ assert inc == 0;
-      inc = 1;
+      //@ assert inc == 0;
+    }
+    /*
+        ça sert à rien :D
+
+        else {
+          //@ assert inc != 0;
+          inc = 1;
+          //@ assert inc == 1;
+        }
+    */
   }
 }
 
